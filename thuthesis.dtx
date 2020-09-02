@@ -2934,6 +2934,32 @@
   },
 %    \end{macrocode}
 %
+% 班级名称。
+%    \begin{macrocode}
+  class-name = {
+     default = {班级名称},
+     name = class@name,
+  },
+  class-name* = {
+     name = class@name@en,
+  },
+%    \end{macrocode}
+%
+% 学号
+%    \begin{macrocode}
+  studentid = {
+     default = {2020xxxxxx},
+  },
+%    \end{macrocode}
+%
+% 教学老师
+%    \begin{macrocode}
+  class-teacher = {
+     default = {舒继武, 教授},
+     name = class@teacher,
+  },
+%    \end{macrocode}
+%
 % 论文成文日期。
 %    \begin{macrocode}
   date = {
@@ -3275,11 +3301,14 @@
 \newcommand\thu@titlepage@info@master@academic{%
   \thu@titlepage@info@tabular{3.59cm}{5.5em}{0.82cm}{%
     \thu@info@item{培养单位}{}{\thu@department}%
-    \thu@info@item{学科}{}{\thu@discipline}%
+    % \thu@info@item{学科}{}{\thu@discipline}%
+    \thu@info@item{班级}{}{\thu@class@name}%
     \thu@info@item{研究生}{\thu@name@title}{\thu@author}%
+    \thu@info@item{学号}{\thu@name@title}{\thu@studentid}%
     \thu@info@item{指导教师}{\thu@name@title}{\thu@supervisor}%
-    \thu@info@item{副指导教师}{\thu@name@title}{\thu@associate@supervisor}%
-    \thu@info@item{联合指导教师}{\thu@name@title}{\thu@joint@supervisor}%
+    % \thu@info@item{副指导教师}{\thu@name@title}{\thu@associate@supervisor}%
+    % \thu@info@item{联合指导教师}{\thu@name@title}{\thu@joint@supervisor}%
+    \thu@info@item{课程教师}{\thu@name@title}{\thu@class@teacher}%
   }\par
 }
 \newcommand\thu@titlepage@info@master@engineer{%
